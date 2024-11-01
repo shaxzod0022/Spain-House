@@ -1,13 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+button {
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.box-shadow-saidBar {
+  box-shadow: 0px 5px 18px 0px #0000004d;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0px 4px 15px 0px #0000004d;
+}
+
+/* Adjust individual card spans */
+.card:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.card:nth-child(2) {
+  grid-column: span 4;
+}
+.card:nth-child(3),
+.card:nth-child(4),
+.card:nth-child(5) {
+  grid-column: span 2;
+}
+
+.card_box_shadow {
+  box-shadow: 0px 4px 15px 0px #0000004d;
 }
