@@ -30,7 +30,7 @@ const Head = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className={`w-full pt-[80px] h-[100vh] relative object-cover bg-cover ${hidden}`}
+      className={`w-full pt-[80px] h-[100vh] relative object-cover bg-cover ${hidden} `}
     >
       <div
         className={`p-5 absolute top-[50%] left-[50%] w-full ${style.fCol} text-white -translate-y-[50%] -translate-x-[50%]`}

@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router";
 import { aboutBgImg, ekaterinaImg } from "../assets";
 import { style } from "../util/styles";
 import Button from "./Button";
 
 const EkaterinaInfo = () => {
+  const navigate = useNavigate();
   return (
     <div
       className={`${style.fBetween} ${style.mediaPaddingAndWidth} py-10 flex-wrap`}
@@ -36,6 +38,7 @@ const EkaterinaInfo = () => {
           LanguageS: RUSSIAN, English, Spanish.
         </p>
         <Button
+          onClick={() => navigate("/contact")}
           title="контакты"
           newClass="uppercase sm:w-auto w-[100%] border-2 border-btnBg !bg-white !text-btnBg hover:!bg-slate-200"
         />

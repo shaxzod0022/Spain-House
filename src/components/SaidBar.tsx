@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { style } from "../util/styles";
 import { close, facebook, insta } from "../assets";
 import { saidBarLinks } from "../util/constants";
@@ -17,6 +17,11 @@ const SaidBar: FC<props> = ({ barClass, onClick }) => {
     setPageName(id);
     navigate(`/${id}`);
   };
+
+  useEffect(() => {
+    navigatePage(url);
+  }, [url]);
+
   return (
     <div
       className={`max-w-[328px] ${barClass} pt-4 box-shadow-saidBar sm:w-full w-[280px] h-[100vh] absolute bg-white`}

@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { logo, menyuBar } from "../assets";
 import { style } from "../util/styles";
 import PhoneNum from "./PhoneNum";
 import Language from "./Language";
 import SaidBar from "./SaidBar";
+import { useLocation } from "react-router";
 
 const Navbar = () => {
+  const pathname = useLocation();
   const [showBar, setShowBar] = useState<string>("-right-[378px] -top-[110vh]");
   const showSaidbar = (): void => {
     setShowBar((prev) =>
@@ -14,7 +16,9 @@ const Navbar = () => {
         : "-right-[378px] -top-[110vh]"
     );
   };
-
+  useEffect(() => {
+    setShowBar("-right-[378px] -top-[110vh]");
+  }, [pathname]);
   return (
     <div
       className={`bg-white box-shadow-saidBa max-w-[1440px] ${style.mediaPaddingAndWidth} fixed z-50 ${style.fBetween}`}

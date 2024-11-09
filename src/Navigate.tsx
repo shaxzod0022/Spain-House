@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Footer, Head, Navbar } from "./components";
+import { Footer, Head, Navbar, ScrollToTop } from "./components";
 import {
   AboutHouse,
   Building,
@@ -15,6 +15,7 @@ function Navigate() {
   return (
     <div className="max-w-[1440px] w-full m-auto">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Head />
         <Routes>

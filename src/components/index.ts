@@ -16,3 +16,4 @@ export { default as SlideBtn } from "./SlideBtn";
 export { default as AboutHouseInfo } from "./AboutHouseInfo";
 export { default as HouseForm } from "./HouseForm";
 export { default as EkaterinaInfoFull } from "./EkaterinaInfoFull";
+export { default as ScrollToTop } from "./ScrollToTop";
