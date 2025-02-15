@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { useLocation, useParams } from "react-router";
+import { useLocation } from "react-router";
 import { buildings, saidBarLinks } from "../util/constants";
 import { style } from "../util/styles";
-import { fooFas, fooIns, foooterLogo, homeHead } from "../assets";
+import { fooFas, fooIns, foooterLogo } from "../assets";
 
 interface props {
   footClass?: string;

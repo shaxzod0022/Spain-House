@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { nextTop, searchImg, spain } from "../assets";
+import { nextTop, searchImg } from "../assets";
 import { searchType } from "../util/constants";
 import { style } from "../util/styles";
 import Button from "./Button";

@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import { amenities, objekts } from "../util/constants";
 import { style } from "../util/styles";
-import { useState } from "react";
 
 const AboutHouseInfo = () => {
   const { houseId } = useParams();

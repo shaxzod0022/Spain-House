@@ -1,4 +1,4 @@
-import { aboutBgImg, aboutImg, ekaterinaImg } from "../assets";
+import { aboutBgImg, ekaterinaImg } from "../assets";
 import { style } from "../util/styles";
 
 const EkaterinaInfoFull = () => {

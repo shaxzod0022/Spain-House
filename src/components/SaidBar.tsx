@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { style } from "../util/styles";
 import { close, facebook, insta } from "../assets";
 import { saidBarLinks } from "../util/constants";
@@ -13,14 +13,17 @@ const SaidBar: FC<props> = ({ barClass, onClick }) => {
   const url = useLocation().pathname.slice(1);
   const [pageName, setPageName] = useState<string>(url);
   const navigate = useNavigate();
-  const navigatePage = (id: string): void => {
-    setPageName(id);
-    navigate(`/${id}`);
-  };
+  const navigatePage = useCallback(
+    (id: string): void => {
+      setPageName(id);
+      navigate(`/${id}`);
+    },
+    [navigate]
+  );
 
   useEffect(() => {
     navigatePage(url);
-  }, [url]);
+  }, [url, navigatePage]);
 
   return (
     <div
